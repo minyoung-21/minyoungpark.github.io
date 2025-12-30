@@ -3,86 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Min Young Park | Software Developer</title>
     <style>
-        /* Simple styling to make it look clean */
+        :root {
+            --primary: #2563eb; /* Professional Blue */
+            --dark: #1e293b;
+            --light-bg: #f8fafc;
+            --text: #334155;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
-            color: #333;
+            color: var(--text);
+            background-color: var(--light-bg);
         }
+
         header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 1rem 0;
+            background: white;
+            padding: 3rem 1rem;
             text-align: center;
+            border-bottom: 1px solid #e2e8f0;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #34495e;
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
         }
-        nav a {
-            color: white;
-            padding: 14px 20px;
+
+        h1 { margin: 0; color: var(--dark); font-size: 2.5rem; }
+        .subtitle { color: var(--primary); font-weight: 600; margin-top: 0.5rem; }
+
+        .links { margin-top: 1.5rem; }
+        .links a {
+            margin: 0 10px;
+            color: var(--primary);
             text-decoration: none;
+            font-weight: 500;
         }
-        nav a:hover {
-            background: #1abc9c;
-        }
+
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
+            max-width: 850px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
         }
+
+        section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .job, .project { margin-bottom: 1.5rem; }
+        .job-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
         footer {
             text-align: center;
-            padding: 20px;
-            background: #2c3e50;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 3rem;
+            font-size: 0.9rem;
+            color: #64748b;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to My World</h1>
+        <img src="profile.jpg" alt="Min Young Park" class="profile-img">
+        <h1>Min Young Park</h1>
+        <div class="subtitle">Computer Science Student @ Rose-Hulman</div>
+        <div class="links">
+            <a href="mailto:minyoungpark5321@gmail.com">Email</a> •
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">LinkedIn</a> •
+            <a href="#">GitHub</a>
+        </div>
     </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
     <div class="container">
+        
         <section id="about">
-            <h2>About Me</h2>
-            <p>Hi! I'm [Your Name]. I am a passionate creator interested in [Your Interests]. This is where I share my journey and work.</p>
+            <h2>Professional Summary</h2>
+            <p>Award-winning programmer skilled in Go, TypeScript, Python, and AWS. Currently engineering critical CMS features and cloud solutions as a Software Developer Intern at Genesys.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="job">
+                <div class="job-header">
+                    <span>Genesys — Software Developer Intern</span>
+                    <span>June 2025 – Present</span>
+                </div>
+                <ul>
+                    <li>Engineered critical CMS features (user mentions, inline comments) and multi-part S3 uploads using AWS, Go, and React.</li>
+                    <li>Resolved complex Slate Editor issues ensuring stable releases and high-quality deliverables.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span>Atom Tech Solutions — Software Engineer Intern</span>
+                    <span>June 2024 – Aug 2024</span>
+                </div>
+                <ul>
+                    <li>Developed web/mobile apps using JavaScript, Express.js, MongoDB, and Bootstrap under Agile methodology.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div><strong>Languages:</strong> Go, TypeScript, Python, Java, C++, JavaScript</div>
+                <div><strong>Cloud/DevOps:</strong> AWS, Jenkins, BitBucket, Firebase</div>
+                <div><strong>Frameworks:</strong> React, Django, Flutter, Express.js</div>
+            </div>
         </section>
 
         <section id="projects">
-            <h2>My Projects</h2>
-            <ul>
-                <li><strong>Project 1:</strong> A cool thing I built using HTML.</li>
-                <li><strong>Project 2:</strong> Another interesting project.</li>
-            </ul>
+            <h2>Selected Projects</h2>
+            <div class="project">
+                <div class="project-header">
+                    <span>An Insurance SurvAIyor</span>
+                    <span class="tag">LLM | AWS | BLIP-1</span>
+                </div>
+                <p>Visual questioning and answering model trained on image datasets for regression statistics and damage reporting.</p>
+            </div>
+            <div class="project">
+                <div class="project-header">
+                    <span>IlliniNoot</span>
+                    <span class="tag">Django | Google Maps API</span>
+                </div>
+                <p>Comprehensive hub for exploring and filtering study spots; built during UIUC HackIllinois 2024.</p>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can reach me at: <strong>email@example.com</strong></p>
-        </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 [Your Name]. Built with curiosity.</p>
+        <p>&copy; 2025 Min Young Park. Built with HTML & CSS.</p>
     </footer>
 
 </body>
